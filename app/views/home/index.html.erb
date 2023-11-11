@@ -6,3 +6,7 @@ Galpões & Estoque
     Cidade: <%= warehouse.city %>
     <%= warehouse.area%> m2
 <% end %>
+
+<% if @warehouses.empty? %>
+    Não existem galpões cadastrados
+<% end %>
