@@ -1,1 +1,8 @@
 Galpões & Estoque
+
+<% @warehouses.each do |warehouse| %>
+    <%= warehouse.name %>
+    Código: <%= warehouse.code %>
+    Cidade: <%= warehouse.city %>
+    <%= warehouse.area%> m2
+<% end %>
