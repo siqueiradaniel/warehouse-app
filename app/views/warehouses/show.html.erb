@@ -1,6 +1,13 @@
-Nome: <%= @warehouse.name%>
-Código: <%= @warehouse.code%>
-Cidade: <%= @warehouse.city%>
-Área: <%= @warehouse.area%>
-Endereço: <%= @warehouse.address%>, CEP: <%= @warehouse.cep%>
-<%= @warehouse.description%>
+<h1>Galpão <%= @warehouse.code %></h1>
+
+<section>
+    <h2><%= @warehouse.description %></h2>
+    <div>
+        <dl>
+            <dt><strong>Nome: </strong></dt> <dd><%= @warehouse.name%></dd>
+            <dt><strong>Cidade:</strong></dt> <dd><%= @warehouse.city%></dd>
+            <dt><strong>Área:</strong></dt> <dd><%= @warehouse.area%> m2</dd>
+            <dt><strong>Endereço:</strong></dt> <dd><%= @warehouse.address%>, CEP: <%= @warehouse.cep %></dd>
+        </dl>
+    </div>
+</section>
