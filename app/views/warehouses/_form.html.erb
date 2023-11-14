@@ -8,12 +8,12 @@
         <%= f.text_field :code %>
     </div>
     <div>
-        <%= f.label :city: 'Cidade'%>
+        <%= f.label :city, 'Cidade'%>
         <%= f.text_field :city %>
     </div>
     <div>
         <%= f.label :area, 'Área'%>
-        <%= f.text_field :area %>
+        <%= f.number_field :area %>
     </div>
     <div>
         <%= f.label :address, 'Endereço'%>
@@ -25,7 +25,7 @@
     </div>
     <div>
         <%= f.label :description, 'Descrição'%>
-        <%= f.text_field :description %>
+        <%= f.text_area :description %>
     </div>
     <div>
         <%= f.submit 'Salvar'%>

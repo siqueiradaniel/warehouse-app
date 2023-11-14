@@ -8,16 +8,18 @@ class WarehousesController < ApplicationController
   end
 
   def create
-    @warehouse = Warehouse.new(name: params[:warehouse][:name],
-                               code: params[:warehouse][:code],
-                               city: params[:warehouse][:city],
-                               area: params[:warehouse][:area],
-                               address: params[:warehouse][:address],
-                               cep: params[:warehouse][:cep],
-                               description: params[:warehouse][:cep])
+    warehouse_params = params.require(:warehouse).permit(:name, 
+                                                         :code, 
+                                                         :city,
+                                                         :area, 
+                                                         :address,
+                                                         :cep,
+                                                         :description)
+
+    @warehouse = Warehouse.new(warehouse_params)
 
     if @warehouse.save 
-      return redirect_to warehouse(@warehouse.id)
+      return redirect_to root_path
     end
 
     render :new
